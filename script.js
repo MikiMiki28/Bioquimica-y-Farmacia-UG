@@ -85,7 +85,7 @@ const prereq = {
  "Física II": ["Cálculo","Física I"],
  "Química Orgánica I": ["Química I"],
  "Botánica Farmacéutica": ["Biologia Celular"]
-"Metodologia de la investigación": ["Lenguaje"],
+ "Metodologia de la investigación": ["Lenguaje"],
  
  "Biología Molecular": ["Fisiologia"],
  "Fisicoquímica": ["Física II"],
@@ -104,7 +104,7 @@ const prereq = {
  "Bioquímica II": ["Bioquímica I"],
  "Analisis Instrumental I": ["Química Analítica II", "Análisis Orgánico],
  "Legislación": ["Bioetica"],                            
-"Gestión de la calidad": ["Química Ambiental"],
+ "Gestión de la calidad": ["Química Ambiental"],
  "Metodologia de la investigación II": ["Estadistica II"],
 
  "Inmunología": ["Bioquímica II"],
