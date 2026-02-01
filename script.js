@@ -11,57 +11,43 @@ const data = [
  ["53. Toxicología","54. Biofarmacia","55. Farmacia Hospitalaria","56. Análisis Clínico II","57. Integración Curricular"]
 ];
 
-const info = {
- "1. Cálculo":"Herramientas matemáticas para análisis científico",
- "3. Química I":"Fundamentos de química general",
- "10. Orgánica I":"Estructura de compuestos orgánicos",
- "22. Bioquímica I":"Procesos químicos de los seres vivos",
- "33. Inmunología":"Sistema inmunológico y defensa",
- "53. Toxicología":"Efectos de sustancias en el organismo"
-};
-
-const prereq = {
- "7. Química II":["3. Química I"],
- "10. Orgánica I":["7. Química II"],
- "17. Orgánica II":["10. Orgánica I"],
- "22. Bioquímica I":["17. Orgánica II"],
- "28. Bioquímica II":["22. Bioquímica I"],
- "36. Farmacología I":["28. Bioquímica II"],
- "38. Farmacología II":["36. Farmacología I"]
-};
-
 const malla = document.getElementById("malla");
-let aprobadas = JSON.parse(localStorage.getItem("aprobadas")||"[]");
-let total = 0;
+let aprobadas = JSON.parse(localStorage.getItem("aprobadas") || "[]");
+let total = data.flat().length;
+
+function semestreDesbloqueado(i){
+  if(i===0) return true;
+  const prev = data[i-1];
+  return prev.every(m => aprobadas.includes(m));
+}
 
 data.forEach((sem,i)=>{
  const col=document.createElement("div");
  col.className="semestre";
  col.innerHTML=`<h3>Semestre ${i+1}</h3>`;
 
+ const activo = semestreDesbloqueado(i);
+
  sem.forEach(mat=>{
-  total++;
   const d=document.createElement("div");
   d.className="materia";
   d.innerText=mat;
 
   if(aprobadas.includes(mat)) d.classList.add("aprobada");
 
-  if(prereq[mat] && !prereq[mat].every(p=>aprobadas.includes(p))){
+  if(!activo){
     d.classList.add("bloqueada");
   }
 
-  d.onclick=()=>toggle(d,mat);
-  d.ondblclick=()=>showInfo(mat);
-
+  d.onclick=()=>toggle(d,mat,activo);
   col.appendChild(d);
  });
 
  malla.appendChild(col);
 });
 
-function toggle(el,mat){
- if(el.classList.contains("bloqueada")) return;
+function toggle(el,mat,activo){
+ if(!activo) return;
 
  el.classList.toggle("aprobada");
 
@@ -77,18 +63,8 @@ function toggle(el,mat){
 }
 
 function updateProgress(){
- const percent=Math.round((aprobadas.length/total)*100);
- document.getElementById("progress").innerText=`Avance: ${percent}%`;
-}
-
-function showInfo(mat){
- document.getElementById("modal-title").innerText=mat;
- document.getElementById("modal-info").innerText=info[mat] || "Materia del pensum de Bioquímica y Farmacia";
- document.getElementById("modal").style.display="block";
-}
-
-function closeModal(){
- document.getElementById("modal").style.display="none";
+ const percent = Math.round((aprobadas.length/total)*100);
+ document.getElementById("progress").innerText = `Avance: ${percent}%`;
 }
 
 updateProgress();
