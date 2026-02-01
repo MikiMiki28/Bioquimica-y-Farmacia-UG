@@ -11,6 +11,11 @@ body {
   padding:20px;
 }
 
+.bloqueada {
+  opacity:0.35;
+  pointer-events:none;
+}
+
 .semestre {
   background:white;
   padding:10px;
