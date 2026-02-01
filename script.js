@@ -1,92 +1,141 @@
 const data = [
  [
-  {name:"1. Cálculo", lab:"Práctica de Cálculo"},
-  {name:"2. Biología Celular", lab:"Práctica de Biología Celular"},
-  {name:"3. Química I", lab:"Práctica de Química I"},
-  {name:"4. Física I", lab:"Práctica de Física I"},
-  {name:"5. Anatomía", lab:"Práctica de Anatomía"},
-  {name:"6. Lenguaje", lab:null}
+  {name:"Cálculo", lab:null},
+  {name:"Biología Celular", lab:"Práctica de Biología Celular"},
+  {name:"Química I", lab:"Práctica de Química I"},
+  {name:"Física I", lab:"Práctica de Física I"},
+  {name:"Anatomía", lab:null},
+  {name:"Lenguaje", lab:null}
  ],
  [
-  {name:"7. Química II", lab:"Práctica de Química II"},
-  {name:"8. Fisiología", lab:"Práctica de Fisiología"},
-  {name:"9. Física II", lab:"Práctica de Física II"},
-  {name:"10. Orgánica I", lab:"Práctica de Orgánica I"},
-  {name:"11. Botánica", lab:"Práctica de Botánica"},
-  {name:"12. Computación I", lab:null},
-  {name:"13. Inglés I", lab:null}
+  {name:"Química II", lab:"Práctica de Química II"},
+  {name:"Fisiología", lab:null},
+  {name:"Física II", lab:"Práctica de Física II"},
+  {name:"Química Orgánica I", lab:"Práctica de Química Orgánica I"},
+  {name:"Botánica Farmaceutica", lab:"Práctica de Química Botánica"},
+  {name:"Metodologia de la investigación", lab:null},
+  {name:"Computación I", lab:null},
+  {name:"Inglés I", lab:null}
  ],
  [
-  {name:"14. Biología Molecular", lab:"Práctica de Biología Molecular"},
-  {name:"15. Fisicoquímica", lab:"Práctica de Fisicoquímica"},
-  {name:"16. Analítica I", lab:"Práctica de Analítica I"},
-  {name:"17. Orgánica II", lab:"Práctica de Orgánica II"},
-  {name:"18. Farmacognosia", lab:"Práctica de Farmacognosia"},
-  {name:"19. Computación II", lab:null},
-  {name:"20. Inglés II", lab:null}
+  {name:"Biología Molecular", lab:null},
+  {name:"Fisicoquímica", lab:null},
+  {name:"Química Analítica I", lab:"Práctica de Química Analítica I"},
+  {name:"Química Orgánica II", lab:"Práctica de Química Orgánica II"},
+  {name:"Farmacognosia y Fitoquímica", lab:"Práctica de Farmacognosia y Fitoquímica"},
+  {name:"Computación II", lab:null},
+  {name:"Inglés II", lab:null}
  ],
  [
-  {name:"21. Análisis Orgánico", lab:"Práctica de Análisis Orgánico"},
-  {name:"22. Bioquímica I", lab:"Práctica de Bioquímica I"},
-  {name:"23. Analítica II", lab:"Práctica de Analítica II"},
-  {name:"24. Bioética", lab:null},
-  {name:"25. Química Ambiental", lab:"Práctica de Química Ambiental"},
-  {name:"26. Computación III", lab:null},
-  {name:"27. Inglés III", lab:null}
+  {name:"Análisis Orgánico", lab:"Práctica de Análisis Orgánico"},
+  {name:"Bioquímica I", lab:"Práctica de Bioquímica I"},
+  {name:"Química Analítica II", lab:"Práctica de Química Analítica II"},
+  {name:"Bioética", lab:null},
+  {name:"Química Ambiental", lab:null},
+  {name:"Computación III", lab:null},
+  {name:"Inglés III", lab:null}
  ],
  [
-  {name:"28. Bioquímica II", lab:"Práctica de Bioquímica II"},
-  {name:"29. Instrumental I", lab:"Práctica de Instrumental I"},
-  {name:"30. Legislación", lab:null},
-  {name:"31. Gestión de Calidad", lab:null},
-  {name:"32. Inglés IV", lab:null}
+  {name:"Bioquímica II", lab:"Práctica de Bioquímica II"},
+  {name:"Instrumental I", lab:"Práctica de Instrumental I"},
+  {name:"Legislación", lab:null},
+  {name:"Gestión de Calidad", lab:null},
+  {name:"Inglés IV", lab:null}
  ],
  [
-  {name:"33. Inmunología", lab:"Práctica de Inmunología"},
-  {name:"34. Instrumental II", lab:"Práctica de Instrumental II"},
-  {name:"35. Microbiología I", lab:"Práctica de Microbiología I"},
-  {name:"36. Farmacología I", lab:"Práctica de Farmacología I"},
-  {name:"37. Tecnología Farmacéutica", lab:"Práctica de Tecnología Farmacéutica"}
+  {name:"Inmunología", lab:"Práctica de Inmunología"},
+  {name:"Analisis Instrumental II", lab:"Práctica de Analisis Instrumental II"},
+  {name:"Microbiología I", lab:"Práctica de Microbiología I"},
+  {name:"Farmacología I", lab:"Práctica de Farmacología I"},
+  {name:"Tecnología Farmacéutica", lab:"Práctica de Tecnología Farmacéutica"}
  ],
  [
-  {name:"38. Farmacología II", lab:"Práctica de Farmacología II"},
-  {name:"39. Parasitología", lab:"Práctica de Parasitología"},
-  {name:"40. Bioquímica de Alimentos", lab:"Práctica de Bioquímica de Alimentos"},
-  {name:"41. Tecnología Farmacéutica II", lab:"Práctica de Tecnología Farmacéutica II"},
-  {name:"42. Microbiología II", lab:"Práctica de Microbiología II"}
+  {name:"Farmacología II", lab:"Práctica de Farmacología II"},
+  {name:"Parasitología", lab:"Práctica de Parasitología"},
+  {name:"Bioquímica de Alimentos", lab:null},
+  {name:"Tecnología Farmacéutica II", lab:"Práctica de Tecnología Farmacéutica II"},
+  {name:"Microbiología II", lab:"Práctica de Microbiología II"}
  ],
  [
-  {name:"43. Análisis de Alimentos I", lab:"Práctica de Análisis de Alimentos I"},
-  {name:"44. Hematología", lab:"Práctica de Hematología"},
-  {name:"45. Medicamentos I", lab:null},
-  {name:"46. Química Cosmética", lab:"Práctica de Química Cosmética"},
-  {name:"47. Emprendimiento", lab:null}
+  {name:"Análisis de Alimentos I", lab:"Práctica de Análisis de Alimentos I"},
+  {name:"Fundamento de Hematología", lab:"Práctica de Fundamento de Hematología"},
+  {name:"Analisis de Medicamentos I", lab:"Práctica de Analisis de Medicamento I"},
+  {name:"Química Cosmética", lab:null},
+  {name:"Emprendimiento e Innovación", lab:null}
  ],
  [
-  {name:"48. Análisis Clínico I", lab:"Práctica de Análisis Clínico I"},
-  {name:"49. Medicamentos II", lab:null},
-  {name:"50. Tecnología de Alimentos", lab:"Práctica de Tecnología de Alimentos"},
-  {name:"51. Análisis de Alimentos II", lab:"Práctica de Análisis de Alimentos II"},
-  {name:"52. Proyectos", lab:null}
+  {name:"Análisis Químico Clínico I", lab:"Práctica de Análisis Químico Clínico I"},
+  {name:"Analisis de Medicamentos II", lab:"Práctica de Analisis de Medicamento II"},
+  {name:"Tecnología de Alimentos", lab:null},
+  {name:"Análisis de Alimentos II", lab:"Práctica de Análisis de Alimentos II"},
+  {name:"Elaboración de Proyectos", lab:null}
  ],
  [
-  {name:"53. Toxicología", lab:"Práctica de Toxicología"},
-  {name:"54. Biofarmacia", lab:"Práctica de Biofarmacia"},
-  {name:"55. Farmacia Hospitalaria", lab:null},
-  {name:"56. Análisis Clínico II", lab:"Práctica de Análisis Clínico II"},
-  {name:"57. Integración Curricular", lab:null}
+  {name:"Toxicología", lab:"Práctica de Toxicología"},
+  {name:"Biofarmacia", lab:null,
+  {name:"Farmacia Hospitalaria", lab:null},
+  {name:"Análisis Clínico II", lab:"Práctica de Análisis Clínico II"},
+  {name:"Unidad de Integración Curricular", lab:null}
  ]
 ];
 
 const prereq = {
- "7. Química II":["3. Química I"],
- "10. Orgánica I":["7. Química II"],
- "17. Orgánica II":["10. Orgánica I"],
- "22. Bioquímica I":["17. Orgánica II"],
- "28. Bioquímica II":["22. Bioquímica I"],
- "36. Farmacología I":["28. Bioquímica II"],
- "38. Farmacología II":["36. Farmacología I"],
- "48. Análisis Clínico I":["44. Hematología"]
+ "Química II": ["Química I"],
+ "Fisiología": ["Anatomía"],
+ "Física II": ["Cálculo","Física I"],
+ "Química Orgánica I": ["Química I"],
+ "Botánica Farmacéutica": ["Biologia Celular"]
+"Metodologia de la investigación": ["Lenguaje"],
+ 
+ "Biología Molecular": ["Fisiologia"],
+ "Fisicoquímica": ["Física II"],
+ "Química Analítica I": ["Química II"],
+ "Química Orgánica II": ["Química Orgánica I", "Química II"],
+ "Farmacognosia": ["Botánica Farmacéutica"],
+ "Estadistica I": ["Metodologia de la investigación"],
+
+ "Análisis Orgánico": ["Química Orgánica II"],
+ "Bioquímica I": ["Química Orgánica II", "Biología Molecular"],
+ "Química Analítica II": ["Química Analítica I"],
+ "Bioetica": ["Biología Molecular"],
+ "Química Ambiental": ["Química Analítica I"],
+ "Estadistica II": ["Estadistica I"],
+
+ "Bioquímica II": ["Bioquímica I"],
+ "Analisis Instrumental I": ["Química Analítica II", "Análisis Orgánico],
+ "Legislación": ["Bioetica"],                            
+"Gestión de la calidad": ["Química Ambiental"],
+ "Metodologia de la investigación II": ["Estadistica II"],
+
+ "Inmunología": ["Bioquímica II"],
+ "Análisis Instrumental II": ["Análisis Instrumental I"],
+ "Microbiología I": ["Bioquimica II"],
+ "Farmacología I": ["Bioquímica II"],
+ "Tecnología Farmacéutica": ["Gestión de la calidad"],
+
+ "Farmacología II": ["Farmacología I"],
+ "Parasitología": ["Inmunologia"],
+ "Bioquímica de Alimentos": ["Microbiología I", "Bioquímica II"],
+ "Tecnología Farmacéutica II": ["Tecnología Farmacéutica I"],
+ "Microbiología II": ["Microbiología I"],
+
+ "Análisis de Alimentos I": ["Bioquímica de Alimentos", "Análisis Instrumental II"],
+ "Fundamentos de Hematología": ["Parasitología", "Inmunología"],
+ "Análisis de Medicamentos I": ["Análisis Instrumental II", "Tecnología Farmacéutica II"],
+ "Química Cosmética": ["Tecnología Farmacéutica II"],
+ "Emprendimiento e Innovación": ["Tecnología Farmacéutica II"],
+
+ "Análisis Químico Clínico I": ["Análisis Instrumental II","Fundamentos de Hematología"],
+ "Análisis de Medicamentos II": ["Análisis de Medicamentos I"],
+ "Tecnología de Alimentos": ["Análisis de Alimentos I"],
+ "Análisis de Alimentos II": ["Análisis de Alimentos I"],
+ "Elaboración de Proyectos": ["Emprendimiento e Innovación"],
+
+ "Toxicología": ["Análisis Químico Clínico I"],
+ "Biofarmacia": [ "Análisis de Medicamentos II"],
+ "Farmacia Hospitalaria": [ "Análisis de Medicamentos II"],
+ "Análisis Químico Clínico II": ["Análisis Químico Clínico I"],
+ "Unidad de integración curricular": ["Análisis Químico Clínico I",  "Análisis de Medicamentos II", "Tecnología de Alimentos", "Análisis de Alimentos II", "Elaboración de Proyectos"]
 };
 
 const malla = document.getElementById("malla");
