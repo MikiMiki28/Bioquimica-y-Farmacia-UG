@@ -6,9 +6,8 @@ body {
 
 .malla {
   display:flex;
-  gap:15px;
-  overflow-x:auto;
-  padding:20px;
+  gap:25px;
+  padding:30px;
 }
 
 .bloqueada {
@@ -17,11 +16,7 @@ body {
 }
 
 .semestre {
-  background:white;
-  padding:10px;
-  border-radius:12px;
-  min-width:220px;
-  box-shadow:0 4px 10px rgba(0,0,0,.1);
+  min-width:280px;
 }
 
 .semestre h3 {
@@ -29,9 +24,12 @@ body {
 }
 
 .materia {
-  background:#ede9fe;
-  color:#3c366b;
-  font-weight:500;
+  font-size:16px;
+  padding:12px;
+}
+
+#progress {
+  font-size:22px;
 }
 
 .materia.aprobada {
@@ -42,5 +40,4 @@ body {
 .materia.bloqueada{
   opacity:0.4;
   pointer-events:none;
-}
 }
